@@ -1,0 +1,1 @@
+SELECT * from `jy-salary`.salary_incr_template where template_name IN ('劳务费居民','薪金居民');
