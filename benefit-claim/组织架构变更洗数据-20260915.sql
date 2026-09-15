@@ -505,7 +505,6 @@ UPDATE `benefit-claim`.disbursement SET create_staff_department_id = '1544422012
 UPDATE `benefit-claim`.disbursement SET create_staff_department_id = '1544422012761862263' WHERE create_staff_id = '1408473358933143555' AND create_staff_department_id = '1357027585979138106';
 UPDATE `benefit-claim`.disbursement SET create_staff_department_id = '1544422012761862263' WHERE create_staff_id = '1408473358970892318' AND create_staff_department_id = '1357027585979138106';
 
-
 UPDATE `benefit-claim`.project SET project_leader_belong_department_id = '1224779496477270016', project_leader_belong_department = '金柚国际/第二事业部' WHERE project_leader_id = '1493211719771967540' AND project_leader_belong_department_id = '1370404746837958695';
 UPDATE `benefit-claim`.project SET project_leader_belong_department_id = '1323986455530242048', project_leader_belong_department = '金柚国际/第二事业部/商务二部' WHERE project_leader_id = '1509141695058087970' AND project_leader_belong_department_id = '1387832350186422276';
 UPDATE `benefit-claim`.project SET project_leader_belong_department_id = '1323986455530242048', project_leader_belong_department = '金柚国际/第二事业部/商务二部' WHERE project_leader_id = '1391712991999180858' AND project_leader_belong_department_id = '1387832350186422276';
