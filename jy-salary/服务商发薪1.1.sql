@@ -44,3 +44,70 @@ WHERE TRUE
 GROUP BY spl.id
 ORDER BY spl.cust_name DESC, spl.project_no DESC, spl.pay_company_id DESC, spl.id DESC
 LIMIT 30;
+
+
+
+SELECT sp.id                     as paymentId,
+       sp.payment_no             as paymentNo,
+       sp.pay_date               as payDate,
+       sp.expect_pay_date        as expectPayDate,
+       sp.request_pay            as requestPay,
+       sp.status                 as status,
+       sp.remark                 as remark,
+       sp.sign_subject_system_id as signSubjectSystemId,
+       sp.sp_com_system_id       as serviceProviderSystemId,
+       sp.create_staff_name      as applicant,
+       sp.update_staff_id        as updateStaffId,
+       sp.create_time            as createTime,
+       sp.approval_id            as approvalId,
+       sp.approval_code          as approvalCode,
+       sp.approval_time          as approvalTime,
+       sp.draft                  as draft,
+       sp.salary_type            as salaryType,
+       sp.payment_type           as paymentType
+FROM salary_payment sp
+         left join salary_payment_detail_payroll_detail_ref spdpdr on sp.id = spdpdr.payment_id
+         LEFT JOIN salary_payroll_detail spd on spdpdr.payroll_detail_id = spd.id
+where sp.system_version = 1
+  AND sp.payment_type = 1
+  AND spd.delete_flag = FALSE
+  AND spd.data_status = 'FORMAL'
+  AND sp.salary_type IN (1)
+  AND sp.pay_date >= '2026-09-26 00:00:00'
+  AND sp.pay_date <= '2026-09-26 23:59:59'
+  AND spd.credentials_code = 440103200006068667
+group by sp.id
+order by sp.id desc
+LIMIT 30;
+
+SELECT * from salary_payment where payment_no = 'FXQK202609171609530016';
+
+
+SELECT spd.id,
+       spd.name                AS staffName,
+       spd.pay_date            AS payDate,
+       spd.payroll_id          AS payrollId,
+       spd.payment_status      AS paymentStatus,
+       spd.offline_info_change AS offlineInfoChange,
+       spd.detail_payment_type AS detailPaymentType,
+       spd.project_staff_id,
+       spd.salary_payment_id   AS paymentId,
+       spd.pre_review_status,
+       spd.original_payment_type,
+       sp.is_dock_bill,
+       sp.sign_subject_id,
+       spd.pay_company_id,
+       sp.enterprise_bank_account,
+       sp.enterprise_sub_number,
+       sp.enterprise_bank_name,
+       sp.sign_subject,
+       spd.name_code_change,
+       spd.corporate_transfer_flag,
+       sp2.system_version      AS systemVersion
+FROM salary_payroll_detail spd
+         LEFT JOIN salary_payroll sp ON sp.id = spd.payroll_id
+         LEFT JOIN salary_payment sp2
+                   ON sp2.id = spd.salary_payment_id AND spd.payment_status IN ('FAIL', 'REISSUED_REJECTION')
+WHERE spd.data_status = 'FORMAL'
+  AND spd.delete_flag = 0
+  AND spd.id IN (1542576407387009078)
