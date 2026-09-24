@@ -1,0 +1,1 @@
+select * from `jy-salary`.salary_payroll where sign_subject_id is null;
