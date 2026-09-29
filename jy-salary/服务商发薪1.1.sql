@@ -110,4 +110,15 @@ FROM salary_payroll_detail spd
                    ON sp2.id = spd.salary_payment_id AND spd.payment_status IN ('FAIL', 'REISSUED_REJECTION')
 WHERE spd.data_status = 'FORMAL'
   AND spd.delete_flag = 0
-  AND spd.id IN (1542576407387009078)
+  AND spd.id IN (1542576407387009078);
+
+
+SELECT bus_contract_com_id      AS signSubjectId,
+       bus_contract_com_name    AS signSubject,
+       pay_com_name             AS payCompany,
+       pay_com_id               AS payCompanyId,
+       service_related_com_id   AS serviceRelatedComId,
+       service_related_com_name AS serviceRelatedComName
+FROM salary_bus_contract_service
+WHERE delete_flag = 0
+  AND ((bus_contract_com_id = 1374705949001801789 AND pay_com_id = 1550158675976044554))
