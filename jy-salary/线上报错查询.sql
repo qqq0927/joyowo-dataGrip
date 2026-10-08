@@ -1,0 +1,1 @@
+SELECT * from salary_payroll where sign_subject is null and delete_flag = 0 ;
