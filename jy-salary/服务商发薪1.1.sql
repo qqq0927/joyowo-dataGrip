@@ -121,4 +121,30 @@ SELECT bus_contract_com_id      AS signSubjectId,
        service_related_com_name AS serviceRelatedComName
 FROM salary_bus_contract_service
 WHERE delete_flag = 0
-  AND ((bus_contract_com_id = 1374705949001801789 AND pay_com_id = 1550158675976044554))
+  AND ((bus_contract_com_id = 1374705949001801789 AND pay_com_id = 1550158675976044554));
+
+select payroll_id, id, credentials_type, credentials_code, pay_company_id, payment_status
+from salary_payroll_detail
+where delete_flag = false
+  and data_status = 'formal'
+  and payroll_id = 1548022933736046618;
+
+select id,
+       is_overt_quota,
+       advance_payment_flag,
+       advance_payment_quota,
+       advance_amount,
+       is_dock_bill,
+       advance_payment,
+       salary_type
+from salary_payroll
+where id in (1548022933736046618)
+  and delete_flag = false
+  and draft = false;
+
+select id, credentials_code, credentials_type
+from salary_payroll_detail
+where delete_flag = false
+  and data_status = 'formal'
+  and payment_status != 'CANCEL'
+  and credentials_code in ('330106199601264396', '440103199003140226');
