@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>审核异常通知</title>
+</head>
+
+<body style="margin: 0">
+<table cellpadding="0" cellspacing="0" style="width: 860px; margin: 0 auto">
+    <tbody>
+    <tr style="height: 88px; background-color: #2a303d">
+        <td style="padding: 24px 0px 24px 32px">
+            <img
+                    style="width: 217px; height: 40px"
+                    src="https://frontend-test-1256919685.cos.ap-shanghai.myqcloud.com/email/logo.png"
+                    alt=""
+            />
+        </td>
+        <td style="width: 361px"></td>
+        <td style="padding-top: 20px">
+            <img
+                    style="width: 250px; height: 68px"
+                    src="https://frontend-test-1256919685.cos.ap-shanghai.myqcloud.com/email/head_bg.png"
+                    alt=""
+            />
+        </td>
+    </tr>
+    <tr style="background-color: #fff">
+        <td
+                colspan="3"
+                style="
+                    padding: 48px 60px 0px;
+                    background-color: #fff;
+                    border: 1px solid #d9d9d9;
+                    border-top-width: 0px;
+                    border-bottom-width: 0px;
+                "
+        >
+            <table cellpadding="0" cellspacing="0" style="color: #000; font-size: 14px">
+                <tbody>
+                <tr>
+                    <td style="padding: 24px 0 16px; font-size: 16px; font-weight: 500">
+                        您申请发薪的《@payrollName@》中，以下员工被审核异常，请关注；
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table cellpadding="0" cellspacing="0" style="font-size: 16px; font-weight: 500">
+                            <tbody>
+                            <tr>
+                                <td style="padding-bottom: 8px">
+                                    客户名称：<span style="color: #d82124">@custName@</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 8px">
+                                    产品名称：<span style="color: #d82124">@comboTitle@</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 8px">
+                                    审核人：<span style="color: #d82124">@checker@</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 8px">
+                                    发放日期：<span style="color: #d82124">@payDate@</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 8px">
+                                    申请人数：<span style="color: #d82124">@applicantNum@</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 8px">
+                                    异常人数：<span style="color: #d82124">@exceptionNum@</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 16px 0 24px; line-height: 24px; word-break: break-all">
+                        @staffNameList@
+                    </td>
+                </tr>
+                <tr>
+                    <td style="line-height: 24px">
+                        注：最多只显示10人姓名，请到工资表中查看异常原因，及时修改员工数据，若发薪金额不变，则重新编辑后可再次【申请审核】；若发薪金额变化，请取消发放后重新创建工资表；若您是申请预审，请修改数据后重新【申请预审】！！
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td
+                colspan="3"
+                style="
+                    padding: 234px 59px 40px;
+                    color: #999;
+                    font-size: 12px;
+                    border: 1px solid #d9d9d9;
+                    border-top-width: 0px;
+                    border-bottom-width: 0px;
+                "
+        >
+            * 此邮件由系统自动发出，请勿直接回复！
+        </td>
+    </tr>
+    <tr style="height: 104px; background-color: #fafafa">
+        <td
+                colspan="2"
+                style="
+                    padding-left: 59px;
+                    border: 1px solid #d9d9d9;
+                    border-top-width: 0px;
+                    border-right-width: 0px;
+                "
+        >
+            <table cellpadding="0" cellspacing="0" style="color: #999; font-size: 12px">
+                <tbody>
+                <tr>
+                    <td>
+                        操作手册/日常问题/学习材料可在企业微信“微盘”及“金柚乐享”相应课堂中查阅
+                    </td>
+                </tr>
+                <tr style="height: 2px">
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        麒麟系统各子模块均有支持群，如有问题，可在企业微信各支持群里反馈
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+        <td
+                style="
+                    padding-left: 69px;
+                    border: 1px solid #d9d9d9;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                "
+        >
+            <img
+                    style="width: 122px; height: 40px"
+                    src="https://frontend-test-1256919685.cos.ap-shanghai.myqcloud.com/email/logo_foot.png"
+                    alt=""
+            />
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

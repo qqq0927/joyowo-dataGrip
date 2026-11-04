@@ -1,0 +1,1 @@
+SELECT * from alipay_account_info
