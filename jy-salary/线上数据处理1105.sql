@@ -1,0 +1,2 @@
+SELECT * from `jy-salary`.salary_payroll where payroll_no ='RJ202610271127490025';
+SELECT id,payment_status from salary_payroll_detail where payroll_id = 1564601514563342376 and credentials_code = '441900198601251314';
